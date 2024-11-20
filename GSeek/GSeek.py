@@ -50,3 +50,21 @@ elif a < b :
     print(b)
 else :
     print("두 개의 숫자는 같습니다.")
+
+# 1부터 10까지 모두 출력
+for i in range(1, 11) :
+    print(i)
+
+# 구구단 출력하기
+for i in range(2, 10) :
+    for j in range (1, 10) :
+        print(str(i) + " * " + str(j) + " = " + str(i*j))
+
+# 입력 받아서 그 단에 해당하는 구구단을 출력하는 함수를 작성하여라
+num = int(input())
+
+def gugudan(num) :
+    for i in range(1, 10) :
+        print(str(num) + " * " + str(i) + " = " + str(num*i))
+
+gugudan(num)
