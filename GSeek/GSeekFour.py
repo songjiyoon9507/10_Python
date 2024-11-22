@@ -36,11 +36,22 @@ print("""
 # \n : 엔터키
 # \t : tab키
 # \\ : \
-a, b = input("곱셈할 두 수를 입력 하시오. 예) 5 4\n").split()
+# a, b = input("두 수를 입력 하시오. 예) 5 4\n").split()
 # split() 스페이스바 기준으로 두 개를 분리 시켜줌
-print(int(a) * int(b))
+# print(int(a) * int(b))
 
-print(f"{a} + {b} = {int(a)+int(b)}")
-print(f"{a} - {b} = {int(a)-int(b)}")
-print(f"{a} / {b} = {int(a)/int(b)}")
-print(f"{a} * {b} = {int(a)*int(b)}")
+# print(f"{a} + {b} = {int(a)+int(b)}")
+# print(f"{a} - {b} = {int(a)-int(b)}")
+# print(f"{a} * {b} = {int(a)*int(b)}")
+# print(f"{a} / {b} = {int(a)/int(b)}")
+# print(f"{a} // {b} = {int(a)//int(b)}")
+# print(f"{a} % {b} = {int(a)%int(b)}")
+# print(f"{a} ** {b} = {int(a)**int(b)}")
+
+print("당신의 파이썬 공부 시간을 알려주세요")
+time = int(input("오늘의 파이썬 공부 시간은 몇 분 인가요?\n"))
+# a = 시간
+a = time // 60
+# b = 분
+b = time % 60
+print(f"당신의 총 공부 시간은 {a}시간 {b}분 입니다.")
