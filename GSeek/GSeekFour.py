@@ -125,3 +125,6 @@ if computer == value :
     print("맞았습니다.")
 else :
     print(f"틀렸습니다. 컴퓨터가 선택한 숫자는 {computer} 입니다.")
+
+# menu = ['삼겹살', '회', '족발', '대창', '순대국', '스파게티']
+# print(f"{random.choice(menu)}")
