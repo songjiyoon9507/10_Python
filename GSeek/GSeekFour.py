@@ -118,13 +118,69 @@ print(f"{f}")
 lottoNum = random.sample(range(1, 45), 6)
 print(lottoNum)
 
-print("컴퓨터가 선택한 숫자를 맞춰보세요")
-value = int(input("1부터 10까지 숫자 중 한개를 입력해주세요\n"))
-computer = random.randint(1, 10)
-if computer == value :
-    print("맞았습니다.")
-else :
-    print(f"틀렸습니다. 컴퓨터가 선택한 숫자는 {computer} 입니다.")
+# print("컴퓨터가 선택한 숫자를 맞춰보세요")
+# value = int(input("1부터 10까지 숫자 중 한개를 입력해주세요\n"))
+# computer = random.randint(1, 10)
+# if computer == value :
+#     print("맞았습니다.")
+# else :
+#     print(f"틀렸습니다. 컴퓨터가 선택한 숫자는 {computer} 입니다.")
 
 # menu = ['삼겹살', '회', '족발', '대창', '순대국', '스파게티']
 # print(f"{random.choice(menu)}")
+
+# 햄버거 주문 프로그램
+menu="""
+불고기 버거 : 5,500원
+치즈 버거 : 4,500원
+에그 버거 : 4,000원
+콜라 : 2,000원
+사이다 : 2,000원
+
+각 버거 세트 메뉴 있습니다.
+세트 메뉴 주문 시에는 500원 할인 됩니다.
+"""
+print("#"*40)
+print(menu)
+print("#"*40)
+
+burger = input("버거를 선택해 주세요. 예) 불고기, 치즈, 에그 >>>")
+drink = input("음료를 선택해 주세요. 예) 콜라, 사이다 >>>")
+combo = input("세트 메뉴 주문하시겠습니까? 예) 네, 아니오 >>>")
+
+b_price = 0
+d_price = 0
+price = 0
+
+# 햄버거 주문
+if burger == "불고기" :
+    b_price = 5500
+    print("선택한 버거는 :", burger, "이고 가격은", b_price, "입니다.")
+elif burger == "치즈" :
+    b_price = 4500
+    print("선택한 버거는 :", burger, "이고 가격은", b_price, "입니다.")
+elif burger == "에그" :
+    b_price = 4000
+    print("선택한 버거는 :", burger, "이고 가격은", b_price, "입니다.")
+else :
+    print("선택한 버거는 메뉴에 없습니다.")
+# print("선택한 버거는 :", burger, "이고 가격은", b_price, "입니다.")
+
+# 음료수 주문
+if drink == "콜라" :
+    d_price = 2000
+    print("선택한 음료는 :", drink, "이고 가격은", d_price, "입니다.")
+elif drink == "사이다" :
+    d_price = 2000
+    print("선택한 음료는 :", drink, "이고 가격은", d_price, "입니다.")
+else :
+    print("선택한 음료는 메뉴에 없습니다.")
+# print("선택한 음료는 :", drink, "이고 가격은", d_price, "입니다.")
+
+# 총 금액
+if combo == "네" :
+    price = b_price + d_price - 500
+    print(f"할인된 총 금액은 {price}원 입니다.")
+else :
+    price = b_price + d_price
+    print(f"총 금액은 {price}원 입니다.")
